@@ -1,0 +1,6 @@
+a = list(range(0,11))
+print(a)
+a.insert(4,20)
+print(a)
+a.remove(20)
+print(a)

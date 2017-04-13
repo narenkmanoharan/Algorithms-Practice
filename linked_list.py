@@ -36,6 +36,7 @@ class LinkedList:
                 temp = temp._next
             temp._next = nd
         temp = self.head
+        length = 0
         while temp != None:
             length += 1
             temp = temp._next
@@ -65,18 +66,23 @@ class LinkedList:
         while temp is not None:
             print(temp.data, end='->')
             temp = temp._next
-        print("list ended")
+        print("X")
+
+
+def Reverse(head, prev=None):
+    if head.next is not None:
+        rev = Reverse(head.next, head)
+        head.next = prev
+        return rev
+    head.next = prev
+    return head
 
 if __name__ == '__main__':
     lst = LinkedList()
     lst.insert(10)
     lst.insert(20)
     lst.insert(333)
-
     lst.insert(1120)
     lst.insert(11230)
     lst.display()
     lst.remove(11230)
-    lst.display()
-
-

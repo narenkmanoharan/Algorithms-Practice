@@ -11,6 +11,7 @@ def cheeseshop(kind, *arguments, **keywords):
 arg = ["It's very runny, sir.",
            "It's really very, VERY runny, sir."]
 
-kw = {'naren':'Dinodaur'}
+kw = {'naren':'Dinosaur'}
 
 cheeseshop("Limburger", *arg, **kw)
+
